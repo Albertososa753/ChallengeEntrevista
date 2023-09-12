@@ -1,0 +1,33 @@
+<form class="container " style="display: flex;    flex-direction: column; align-items: center;">
+    <div class="mb-3">
+      <label class="form-label">Origen</label>
+      <input type="text" class="form-control"  aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Destino</label>
+      <input type="text" class="form-control" >
+    </div>
+    <div>
+        <label for="fechaLlegada">Fecha de Llegada:</label>
+        <input type="date" id="fechaLlegada" [(ngModel)]="fechaLlegada" name="fechaLlegada">
+      </div>
+      <br>
+      <div>
+        <label for="fechaSalida">Fecha de Salida:</label>
+        <input type="date" id="fechaSalida" [(ngModel)]="fechaSalida" name="fechaSalida">
+      </div>
+      <br>
+      <div>
+        <label for="medioTransporte">Medio de Transporte:</label>
+        <select id="medioTransporte" [(ngModel)]="medioTransporte" name="medioTransporte">
+          <option value="avion">Avión</option>
+          <option value="tren">Tren</option>
+          <option value="micro">Micro</option>
+        </select>
+      </div>
+      <br>
+      <div >
+
+        <button type="submit"  class="btn btn-primary" style="display: flex; text-align: center;">Crear</button>
+      </div>
+  </form>

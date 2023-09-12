@@ -1,0 +1,21 @@
+<div>
+    <h3>
+TRAVELS    </h3>
+  <a class="btn btn-primary" href="admin/newTravel">Nuevo</a>
+  
+    <ngx-datatable class="material fullscreen" style="top: 52px" [columnMode]="ColumnMode.force" [headerHeight]="50"
+      [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="rows">
+      <ngx-datatable-column name="Origen" prop="origen" [width]="150"> <ng-template let-row="row"></ng-template>
+       </ngx-datatable-column>
+      <ngx-datatable-column name="Destino" prop="destino" [width]="150"></ngx-datatable-column>
+      <ngx-datatable-column name="Fecha de Llegada" prop="fechaLlegada" [width]="150"></ngx-datatable-column>
+      <ngx-datatable-column name="Fecha de Salida" prop="fechaSalida" [width]="150"></ngx-datatable-column>
+      <ngx-datatable-column name="Medio de Transporte" prop="medioTransporte" [width]="200"></ngx-datatable-column>
+      <ngx-datatable-column name="Opcion" [width]="150">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <button  class="btn btn-primary" (click)="borrarRegistro(row)">{{ row.deleteLabel }}</button>
+          <button class="btn btn-success" routerLink="/editTravel/{{rows.origen}}" (click)="editarRegistro(row)">{{ row.editLabel }}</button>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
