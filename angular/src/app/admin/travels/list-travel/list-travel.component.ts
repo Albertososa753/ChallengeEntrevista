@@ -9,7 +9,7 @@ import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
   templateUrl: './list-travel.component.html',
   styleUrls: ['./list-travel.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class ListTravelsComponent implements OnInit {
   replaceableComponents: Set<any> = new Set(); // Inicializa replaceableComponents como un conjunto
 
   ColumnMode = ColumnMode;
@@ -24,13 +24,13 @@ export class AdminComponent implements OnInit {
     deleteLabel: string;
   }[] = [];
 
-  constructor(private cdr: ChangeDetectorRef, private ngZone: NgZone, private travelService: TravelService, private router : Router) {}
+  constructor( private travelService: TravelService, private router : Router) {}
 
   ngOnInit() {
     // Llama al servicio para obtener la lista de viajes
     this.travelService.getList({ sorting: '', skipCount: 0, maxResultCount: 100 }) // Ajusta los parámetros según tus necesidades
       .subscribe((result) => {
-        console.log(result,'hp;a')
+     
         // Mapea los datos del servicio al formato esperado por la tabla
         this.rows = result.items.map((travel) => {
           return {
@@ -74,7 +74,7 @@ export class AdminComponent implements OnInit {
     // Verifica si el evento es un clic en una fila y si tiene un ID válido
     if (event.type === 'click' && event.row ) {
       const travelId = event.row.id;
-      this.router.navigate(['admin/editTravel', travelId]);
+      this.router.navigate(['admin/travels/editTravel', travelId]);
     }
   }
 

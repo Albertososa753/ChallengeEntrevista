@@ -1,0 +1,58 @@
+.travel-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+  }
+  
+  .details-title {
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+  
+  .detail-row {
+    margin-bottom: 10px; /* Espaciado inferior entre filas */
+  }
+  
+  .detail-value {
+    font-size: 1.2rem; /* Tamaño de fuente */
+  }
+  
+  .edit-icon {
+    margin-left: 10px; /* Espacio entre el texto y el icono */
+    cursor: pointer;
+    transition: color 0.3s; /* Transición de color al pasar el mouse */
+  }
+  
+  .edit-icon:hover {
+    color: blue; /* Cambia el color al pasar el mouse */
+  }
+  
+  .detail-input {
+    font-size: 1.2rem; /* Tamaño de fuente para los campos de entrada */
+    padding: 5px; /* Espaciado interno para los campos de entrada */
+    border: 1px solid #ccc; /* Borde borroso */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Ancho completo */
+  }
+  
+  .save-button {
+    margin-top: 20px; /* Espaciado superior para el botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 1.2rem; /* Tamaño de fuente para el botón */
+    border: 1px solid #007bff; /* Borde borroso */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición de color al pasar el mouse */
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+    border: 1px solid #0056b3; /* Cambia el borde al pasar el mouse */
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+  }
+  

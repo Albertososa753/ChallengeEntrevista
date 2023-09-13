@@ -18,12 +18,13 @@ import { AbpOAuthModule } from '@abp/ng.oauth';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/travels/list-travel/list-travel.component';
+import { ListTravelsComponent } from './admin/travels/list-travel/list-travel.component';
 import { NewTravelComponent } from './admin/travels/new-travel/new-travel.component';
 import { FormsModule } from '@angular/forms';
 import { EditTravelComponent } from './admin/travels/edit-travel/edit-travel.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ListPasajerosComponent } from './admin/pasajeros/list-pasajeros/list-pasajeros.component';
+import { NewPasajeroComponent } from './admin/pasajeros/new-pasajero/new-pasajero.component';
 
 
 
@@ -47,7 +48,7 @@ import { ListPasajerosComponent } from './admin/pasajeros/list-pasajeros/list-pa
     FeatureManagementModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
-  declarations: [AppComponent,HomeComponent, AdminComponent , NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent],
+  declarations: [AppComponent,HomeComponent ,ListTravelsComponent, NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent,NewPasajeroComponent],
  // providers: [APP_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })

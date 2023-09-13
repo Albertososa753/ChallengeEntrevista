@@ -13,8 +13,8 @@ export class NewTravelComponent {
   transporteEnum = Transporte; // Agrega esta línea para crear una referencia al enum
 
   trave: CreateUpdateTravelDto = {
-    fechaSalida: null,
-    fechaLlegada: null,
+    fechaSalida: '',
+    fechaLlegada: '',
     medioTransporte: null,
     origen: '',
     destino: ''
@@ -23,11 +23,14 @@ export class NewTravelComponent {
   constructor(private travelService: TravelService, private router: Router) {}
 
   createTravel() {
+ 
+
+      
     this.travelService.create(this.trave)
       .subscribe((response) => {
         // Manejar la respuesta exitosa aquí (por ejemplo, redirección o notificación de éxito).
         console.log('Travel creado exitosamente', response);
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin/travels/list-travel']);
 
       }, (error) => {
         // Manejar errores aquí (por ejemplo, mostrar un mensaje de error).
