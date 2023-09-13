@@ -6,8 +6,8 @@ import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
 
 @Component({
   selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  templateUrl: './list-travel.component.html',
+  styleUrls: ['./list-travel.component.scss']
 })
 export class AdminComponent implements OnInit {
   replaceableComponents: Set<any> = new Set(); // Inicializa replaceableComponents como un conjunto
