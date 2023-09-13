@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeModule } from './home/home.module';
-import { AdminComponent } from './admin/vistaAdmin/admin.component';
+import { AdminComponent } from './admin/travels/tablaTravels/admin.component';
 import { LoginComponent } from './login/login.component';
-import { NewTravelComponent } from './admin/new-travel/new-travel.component';
+import { NewTravelComponent } from './admin/travels/new-travel/new-travel.component';
+import { EditTravelComponent } from './admin/travels/edit-travel/edit-travel.component';
 
 const routes: Routes = [
   {
-    path: 'admin' , component:AdminComponent,
+    path: '' , component:AdminComponent,
     
   },
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   },
   {
     path: 'admin/newTravel' , component: NewTravelComponent,
+    
+  },
+  {
+    path: 'admin/editTravel/:id' , component: EditTravelComponent,
     
   },
   

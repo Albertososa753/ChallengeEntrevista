@@ -1,0 +1,34 @@
+<div *ngIf="travelDetails">
+    <h2>Detalles del Viaje</h2>
+    <p><strong>Origen:</strong> 
+      <span *ngIf="!editingOrigin">{{ travelDetails.origen }} <i class="fas fa-pencil-alt" (click)="editarCampo('origen')"></i></span>
+      <input *ngIf="editingOrigin" [(ngModel)]="travelDetails.origen" (blur)="guardarCampo('origen')" (keyup.enter)="guardarCampo('origen')" />
+    </p>
+    
+    <p><strong>Destino:</strong> 
+      <span *ngIf="!editingDestination">{{ travelDetails.destino }} <i class="fas fa-pencil-alt" (click)="editarCampo('destino')"></i></span>
+      <input *ngIf="editingDestination" [(ngModel)]="travelDetails.destino" (blur)="guardarCampo('destino')" (keyup.enter)="guardarCampo('destino')" />
+    </p>
+    
+    <p><strong>Fecha de Llegada:</strong> 
+      <span *ngIf="!editingArrivalDate">{{ travelDetails.fechaLlegada }} <i class="fas fa-pencil-alt" (click)="editarCampo('fechaLlegada')"></i></span>
+      <input *ngIf="editingArrivalDate" type="date" [(ngModel)]="travelDetails.fechaLlegada" (blur)="guardarCampo('fechaLlegada')" (keyup.enter)="guardarCampo('fechaLlegada')" />
+    </p>
+    
+    <p><strong>Fecha de Salida:</strong> 
+      <span *ngIf="!editingDepartureDate">{{ travelDetails.fechaSalida }} <i class="fas fa-pencil-alt" (click)="editarCampo('fechaSalida')"></i></span>
+      <input *ngIf="editingDepartureDate" type="date" [(ngModel)]="travelDetails.fechaSalida" (blur)="guardarCampo('fechaSalida')" (keyup.enter)="guardarCampo('fechaSalida')" />
+    </p>
+    
+    <p><strong>Medio de Transporte:</strong> 
+      <span *ngIf="!editingTransport">{{ getTransportName(travelDetails.medioTransporte) }} <i class="fas fa-pencil-alt" (click)="editarCampo('medioTransporte')"></i></span>
+      <select *ngIf="editingTransport" [(ngModel)]="travelDetails.medioTransporte" (blur)="guardarCampo('medioTransporte')" (change)="guardarCampo('medioTransporte')">
+        <option value="{{ Transporte.Tren }}">Tren</option>
+        <option value="{{ Transporte.Avion }}">Avión</option>
+        <option value="{{ Transporte.Micro }}">Micro</option>
+      </select>
+    </p>
+    
+    <button class="btn btn-primary" (click)="guardarCambios()">Guardar Cambios</button>
+  </div>
+  
