@@ -6,41 +6,46 @@ import { ColumnMode } from '@swimlane/ngx-datatable';
 @Component({
   selector: 'app-viaje-asociado',
   templateUrl: './viaje-asociado.component.html',
-  styleUrls: ['./viaje-asociado.component.scss']
+  styleUrls: ['./viaje-asociado.component.scss'],
 })
 export class ViajeAsociadoComponent implements OnInit {
-
-  travelData =[  {
-    origen: 'Ciudad A',
-    destino: 'Ciudad B',
-    fechaLlegada: '2023-09-15',
-    fechaSalida: '2023-09-10',
-    medioTransporte: 'Avión'
-  }, {
-    origen: 'Ciudad A',
-    destino: 'Ciudad B',
-    fechaLlegada: '2023-09-15',
-    fechaSalida: '2023-09-10',
-    medioTransporte: 'Avión'
-  }, {
-    origen: 'Ciudad A',
-    destino: 'Ciudad B',
-    fechaLlegada: '2023-09-15',
-    fechaSalida: '2023-09-10',
-    medioTransporte: 'Avión'
-  }, {
-    origen: 'Ciudad A',
-    destino: 'Ciudad B',
-    fechaLlegada: '2023-09-15',
-    fechaSalida: '2023-09-10',
-    medioTransporte: 'Avión'
-  }, {
-    origen: 'Ciudad A',
-    destino: 'Ciudad B',
-    fechaLlegada: '2023-09-15',
-    fechaSalida: '2023-09-10',
-    medioTransporte: 'Avión'
-  }]
+  travelData = [
+    {
+      origen: 'Ciudad A',
+      destino: 'Ciudad B',
+      fechaLlegada: '2023-09-15',
+      fechaSalida: '2023-09-10',
+      medioTransporte: 'Avión',
+    },
+    {
+      origen: 'Ciudad A',
+      destino: 'Ciudad B',
+      fechaLlegada: '2023-09-15',
+      fechaSalida: '2023-09-10',
+      medioTransporte: 'Avión',
+    },
+    {
+      origen: 'Ciudad A',
+      destino: 'Ciudad B',
+      fechaLlegada: '2023-09-15',
+      fechaSalida: '2023-09-10',
+      medioTransporte: 'Avión',
+    },
+    {
+      origen: 'Ciudad A',
+      destino: 'Ciudad B',
+      fechaLlegada: '2023-09-15',
+      fechaSalida: '2023-09-10',
+      medioTransporte: 'Avión',
+    },
+    {
+      origen: 'Ciudad A',
+      destino: 'Ciudad B',
+      fechaLlegada: '2023-09-15',
+      fechaSalida: '2023-09-10',
+      medioTransporte: 'Avión',
+    },
+  ];
 
   ColumnMode = ColumnMode;
 
@@ -66,7 +71,7 @@ export class ViajeAsociadoComponent implements OnInit {
             surname: pasajero.surname,
             dni: pasajero.dni,
             dateBirth: pasajero.dateBirth,
-          }
+          },
         ];
         console.log(this.pasajeroDetails, 'aaaaaaaaa');
       });

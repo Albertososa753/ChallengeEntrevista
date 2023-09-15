@@ -5,11 +5,10 @@ import { CreateUpdateTravelDto, TravelDto, TravelService } from '@proxy/travels'
 @Component({
   selector: 'app-edit-travel',
   templateUrl: './edit-travel.component.html',
-  styleUrls: ['./edit-travel.component.scss']
+  styleUrls: ['./edit-travel.component.scss'],
 })
 export class EditTravelComponent implements OnInit {
   travelDetails: CreateUpdateTravelDto;
-  
 
   editingOrigin = false;
   editingDestination = false;
@@ -24,10 +23,9 @@ export class EditTravelComponent implements OnInit {
   ) {}
 
   id: string;
-    navigate(){
-      this.router.navigate(['/admin/travels/add-pasajero/',this.id]);
-
-    }
+  navigate() {
+    this.router.navigate(['/admin/travels/add-pasajero/', this.id]);
+  }
   ngOnInit() {
     this._route.params.subscribe(params => {
       this.id = params['id'];
@@ -37,7 +35,7 @@ export class EditTravelComponent implements OnInit {
           fechaLlegada: result.fechaLlegada || '',
           origen: result.origen || '',
           destino: result.destino || '',
-          medioTransporte: result.medioTransporte
+          medioTransporte: result.medioTransporte,
         };
         console.log(result);
       });
@@ -93,8 +91,8 @@ export class EditTravelComponent implements OnInit {
     console.log('Detalles actualizados:', this.travelDetails);
     this._travelService.update(this.id, this.travelDetails).subscribe(() => {
       console.log('VIAJE MODIFICADO CON ÉXITO!');
+      this.ngOnInit();
+      this.router.navigate(['/admin/travels/list-travel']);
     });
-    this.router.navigate(['/admin/travels/list-travel']);
   }
-  
 }

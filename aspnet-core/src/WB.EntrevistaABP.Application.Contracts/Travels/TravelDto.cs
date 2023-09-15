@@ -11,5 +11,5 @@ public class TravelDto : AuditedEntityDto<Guid>
     public DateTime FechaLlegada { get; set; }
     public string Origen { get; set; }
     public string Destino { get; set; }
-    public Transporte MedioTransporte {get; set;}    
+    public Transporte MedioTransporte { get; set; }
 }

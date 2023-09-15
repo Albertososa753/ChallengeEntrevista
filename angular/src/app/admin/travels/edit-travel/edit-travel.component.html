@@ -1,46 +1,91 @@
-<div *ngIf="travelDetails" class="card travel-details ">
-    <div class="card-body color2 ">
-      <h2 class="card-title details-title mori">Detalles del Viaje:</h2>
-  
-      <div class="detail-row mori">
+<div class="container">
+  <h1 class="table-title">Detalles del Viaje:</h1>
+  <div *ngIf="travelDetails" class="card travel-details common-form">
+    <div class="card-title details-title">
+      <div class="detail-row">
         <strong>Origen:</strong>
-        <span *ngIf="!editingOrigin" class="detail-value">{{ travelDetails.origen }} <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('origen')"></i></span>
-        <input *ngIf="editingOrigin" [(ngModel)]="travelDetails.origen" class="form-control detail-input" (blur)="guardarCampo('origen')" (keyup.enter)="guardarCampo('origen')" />
+        <span *ngIf="!editingOrigin" class="detail-value"
+          >{{ travelDetails.origen }}
+          <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('origen')"></i
+        ></span>
+        <input
+          *ngIf="editingOrigin"
+          [(ngModel)]="travelDetails.origen"
+          class="form-control detail-input"
+          (blur)="guardarCampo('origen')"
+          (keyup.enter)="guardarCampo('origen')"
+        />
       </div>
-  
-      <div class="detail-row mori">
+      <div class="detail-row">
         <strong>Destino:</strong>
-        <span *ngIf="!editingDestination" class="detail-value">{{ travelDetails.destino }} <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('destino')"></i></span>
-        <input *ngIf="editingDestination" [(ngModel)]="travelDetails.destino" class="form-control detail-input" (blur)="guardarCampo('destino')" (keyup.enter)="guardarCampo('destino')" />
+        <span *ngIf="!editingDestination" class="detail-value"
+          >{{ travelDetails.destino }}
+          <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('destino')"></i
+        ></span>
+        <input
+          *ngIf="editingDestination"
+          [(ngModel)]="travelDetails.destino"
+          class="form-control detail-input"
+          (blur)="guardarCampo('destino')"
+          (keyup.enter)="guardarCampo('destino')"
+        />
       </div>
-  
-      <div class="detail-row mori">
+      <div class="detail-row">
         <strong>Fecha de Llegada:</strong>
-        <span *ngIf="!editingArrivalDate" class="detail-value">{{ travelDetails.fechaLlegada }} <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('fechaLlegada')"></i></span>
-        <input *ngIf="editingArrivalDate" type="date" [(ngModel)]="travelDetails.fechaLlegada" class="form-control detail-input" (blur)="guardarCampo('fechaLlegada')" (keyup.enter)="guardarCampo('fechaLlegada')" />
+        <span *ngIf="!editingArrivalDate" class="detail-value"
+          >{{ travelDetails.fechaLlegada }}
+          <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('fechaLlegada')"></i
+        ></span>
+        <input
+          *ngIf="editingArrivalDate"
+          type="date"
+          [(ngModel)]="travelDetails.fechaLlegada"
+          class="form-control detail-input"
+          (blur)="guardarCampo('fechaLlegada')"
+          (keyup.enter)="guardarCampo('fechaLlegada')"
+        />
       </div>
-  
-      <div class="detail-row mori">
+      <div class="detail-row">
         <strong>Fecha de Salida:</strong>
-        <span *ngIf="!editingDepartureDate" class="detail-value">{{ travelDetails.fechaSalida }} <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('fechaSalida')"></i></span>
-        <input *ngIf="editingDepartureDate" type="date" [(ngModel)]="travelDetails.fechaSalida" class="form-control detail-input" (blur)="guardarCampo('fechaSalida')" (keyup.enter)="guardarCampo('fechaSalida')" />
+        <span *ngIf="!editingDepartureDate" class="detail-value"
+          >{{ travelDetails.fechaSalida }}
+          <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('fechaSalida')"></i
+        ></span>
+        <input
+          *ngIf="editingDepartureDate"
+          type="date"
+          [(ngModel)]="travelDetails.fechaSalida"
+          class="form-control detail-input"
+          (blur)="guardarCampo('fechaSalida')"
+          (keyup.enter)="guardarCampo('fechaSalida')"
+        />
       </div>
-  
-      <div class="detail-row mori">
+      <div class="detail-row">
         <strong>Medio de Transporte:</strong>
-        <span *ngIf="!editingTransport" class="detail-value">{{ getTransportName(travelDetails.medioTransporte) }} <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('medioTransporte')"></i></span>
-        <select *ngIf="editingTransport" [(ngModel)]="travelDetails.medioTransporte" class="form-control detail-input" (blur)="guardarCampo('medioTransporte')" (change)="guardarCampo('medioTransporte')">
+        <span *ngIf="!editingTransport" class="detail-value"
+          >{{ getTransportName(travelDetails.medioTransporte) }}
+          <i class="fas fa-pencil-alt edit-icon" (click)="editarCampo('medioTransporte')"></i
+        ></span>
+        <select
+          *ngIf="editingTransport"
+          [(ngModel)]="travelDetails.medioTransporte"
+          class="form-control detail-input"
+          (blur)="guardarCampo('medioTransporte')"
+          (change)="guardarCampo('medioTransporte')"
+        >
           <option value="{{ Transporte.Tren }}">Tren</option>
           <option value="{{ Transporte.Avion }}">Avión</option>
           <option value="{{ Transporte.Micro }}">Micro</option>
         </select>
       </div>
-  <div style="display: flex; justify-content: space-between;">
-
-    
-    <button class="btn btn-primary save-button" (click)="guardarCambios()">Guardar Cambios</button>
-    <button class="btn btn-primary save-button" (click)="navigate()">Asignar Pasajeros</button>
-  </div>    
+      <div style="display: flex; justify-content: space-between">
+        <button class="btn common-button" (click)="guardarCambios()">
+          <i class="fas fa-save"></i>Guardar Cambios
+        </button>
+        <button class="btn common-button" (click)="navigate()">
+          <i class="fas fa-plus"></i> Asignar Pasajeros
+        </button>
+      </div>
     </div>
   </div>
-  
+</div>

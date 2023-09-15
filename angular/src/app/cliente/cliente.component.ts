@@ -4,7 +4,7 @@ import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.scss']
+  styleUrls: ['./cliente.component.scss'],
 })
 export class ClienteComponent {
   ColumnMode = ColumnMode;
@@ -16,8 +16,7 @@ export class ClienteComponent {
       destino: 'Rosario',
       fechaLlegada: '14/12/2024',
       fechaSalida: '13/12/2024',
-      medioTransporte: 'Tren'
+      medioTransporte: 'Tren',
     },
   ];
 }
-

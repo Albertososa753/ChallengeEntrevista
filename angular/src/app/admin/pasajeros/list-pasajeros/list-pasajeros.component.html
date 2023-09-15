@@ -1,13 +1,13 @@
-<div style="height: 90%; margin-top: 1%;" class="container">
-  <div class="d-flex justify-content-between align-items-center">
-   <h1 class="text">Lista de pasajeros:</h1>
+<div style="height: 90%; margin-top: 1%" class="container">
+  <div>
+    <h1 class="table-title">Lista de pasajeros:</h1>
     <a class="btn btn-primary" routerLink="/admin/pasajeros/newPasajeros">
       <i class="fas fa-user-plus"></i> Crear Pasajero
     </a>
   </div>
   <ngx-datatable
     class="material fullscreen color2 container"
-    style="top: 52px; height: 90%;"
+    style="top: 52px; height: 90%"
     [columnMode]="ColumnMode.force"
     [headerHeight]="50"
     [footerHeight]="0"
@@ -18,26 +18,33 @@
   >
     <!-- Fila de título "Pasajeros" -->
 
-
-    <ngx-datatable-column name="Nombre" prop="name"  [width]="150">
+    <ngx-datatable-column name="Nombre" prop="name" [width]="150">
       <ng-template let-row="row"></ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="Apellido" prop="surname" [width]="150"></ngx-datatable-column>
     <ngx-datatable-column name="DNI" prop="dni" [width]="150"></ngx-datatable-column>
-    <ngx-datatable-column name="Fecha de Nacimiento" prop="dateBirth" [width]="150"></ngx-datatable-column>
-    <ngx-datatable-column *ngIf="viajesAsociados" name="Viajes Asociados"  [width]="150"> <ng-template let-row="row" ngx-datatable-cell-template>
-     
-     
-    
-      <button title="viajesAsociados" class="btn btn-info" routerLink="/admin/pasajero/viaj-asociad/{{row.id}}" >
-        <i class="fa fa-file-text-o"></i>Inspeccionar
-        
-      </button>
-    </ng-template></ngx-datatable-column>
-    <ngx-datatable-column *ngIf="!viajesAsociados" name="Viajes Asociados"  [width]="150"> <ng-template let-row="row" ngx-datatable-cell-template>
-     No posee
-     <!-- Se le podria agregar otro componente que diga agregar  -->
-    </ng-template></ngx-datatable-column>
+    <ngx-datatable-column
+      name="Fecha de Nacimiento"
+      prop="dateBirth"
+      [width]="150"
+    ></ngx-datatable-column>
+    <ngx-datatable-column *ngIf="viajesAsociados" name="Viajes Asociados" [width]="150">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <button
+          title="viajesAsociados"
+          class="btn btn-info"
+          routerLink="/admin/pasajero/viaj-asociad/{{ row.id }}"
+        >
+          <i class="fa fa-file-text-o"></i>Inspeccionar
+        </button>
+      </ng-template></ngx-datatable-column
+    >
+    <ngx-datatable-column *ngIf="!viajesAsociados" name="Viajes Asociados" [width]="150">
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        No posee
+        <!-- Se le podria agregar otro componente que diga agregar  -->
+      </ng-template></ngx-datatable-column
+    >
 
     <ngx-datatable-column name="Opción" [width]="150">
       <ng-template let-row="row" ngx-datatable-cell-template>

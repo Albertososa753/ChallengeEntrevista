@@ -4,7 +4,7 @@ import { UserStateService } from '../serv/ser.service'; // Asegúrate de importa
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
   selectedUserRole: string = 'cliente';
@@ -15,9 +15,9 @@ export class LayoutComponent {
     if (this.selectedUserRole === 'admin') {
       console.log(this.selectedUserRole);
       this.userStateService.setUserType(this.selectedUserRole);
-    } else if (this.selectedUserRole === '1q2w3E') {
-      this.selectedUserRole = 'admin'; 
-      console.log(this.selectedUserRole); 
+    } else if (this.selectedUserRole === '1') {
+      this.selectedUserRole = 'admin';
+      console.log(this.selectedUserRole);
       this.userStateService.setUserType(this.selectedUserRole);
     } else {
       console.log('Valor no válido');

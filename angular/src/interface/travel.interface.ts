@@ -1,7 +1,7 @@
-export interface Travel  {
-    origen : string;
-    destino : string;
-    fechaLlegada: Date;
-    fechaSalida: Date;
-    medioTransporte: string;
-  } 
+export interface Travel {
+  origen: string;
+  destino: string;
+  fechaLlegada: Date;
+  fechaSalida: Date;
+  medioTransporte: string;
+}

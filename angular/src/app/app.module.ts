@@ -29,7 +29,6 @@ import { AddPasajeroComponent } from './admin/travels/add-pasajero/add-pasajero.
 import { ClienteComponent } from './cliente/cliente.component';
 import { ViajeAsociadoComponent } from './admin/pasajeros/viaje-asociado/viaje-asociado.component';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -50,8 +49,20 @@ import { ViajeAsociadoComponent } from './admin/pasajeros/viaje-asociado/viaje-a
     FeatureManagementModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
-  declarations: [AppComponent,HomeComponent ,ListTravelsComponent, NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent,NewPasajeroComponent, AddPasajeroComponent, ClienteComponent, ViajeAsociadoComponent],
- // providers: [APP_ROUTE_PROVIDER],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ListTravelsComponent,
+    NewTravelComponent,
+    EditTravelComponent,
+    LayoutComponent,
+    ListPasajerosComponent,
+    NewPasajeroComponent,
+    AddPasajeroComponent,
+    ClienteComponent,
+    ViajeAsociadoComponent,
+  ],
+  // providers: [APP_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

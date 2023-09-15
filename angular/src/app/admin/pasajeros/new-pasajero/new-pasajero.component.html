@@ -1,22 +1,57 @@
-<div class="container">
-  <h2>Agregar Pasajero</h2>
-  <form (ngSubmit)="agregarPasajero()" #pasajeroForm="ngForm">
+<div class="container" style="display: flex; flex-direction: column">
+  <h1 class="table-title">Agregar Pasajero</h1>
+  <form
+    (ngSubmit)="agregarPasajero()"
+    class="common-form"
+    style="width: 100%"
+    #pasajeroForm="ngForm"
+  >
     <div class="form-group">
       <label for="name">Nombre:</label>
-      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="nuevoPasajero.name" required>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="nuevoPasajero.name"
+        required
+      />
     </div>
     <div class="form-group">
       <label for="surname">Apellido:</label>
-      <input type="text" class="form-control" id="surname" name="surname" [(ngModel)]="nuevoPasajero.surname" required>
+      <input
+        type="text"
+        class="form-control"
+        id="surname"
+        name="surname"
+        [(ngModel)]="nuevoPasajero.surname"
+        required
+      />
     </div>
     <div class="form-group">
       <label for="dni">DNI:</label>
-      <input type="number" class="form-control" id="dni" name="dni" [(ngModel)]="nuevoPasajero.dni" required>
+      <input
+        type="number"
+        class="form-control"
+        id="dni"
+        name="dni"
+        [(ngModel)]="nuevoPasajero.dni"
+        required
+      />
     </div>
     <div class="form-group">
       <label for="dateBirth">Fecha de Nacimiento:</label>
-      <input type="date" class="form-control" id="dateBirth" name="dateBirth" [(ngModel)]="nuevoPasajero.dateBirth" required>
+      <input
+        type="date"
+        class="form-control"
+        id="dateBirth"
+        name="dateBirth"
+        [(ngModel)]="nuevoPasajero.dateBirth"
+        required
+      />
     </div>
-    <button type="submit" class="btn btn-primary">Agregar</button>
+    <div style="width: 100%">
+      <button type="submit" style="width: 100%; margin-top: 15px" class="btn">Agregar</button>
+    </div>
   </form>
 </div>
