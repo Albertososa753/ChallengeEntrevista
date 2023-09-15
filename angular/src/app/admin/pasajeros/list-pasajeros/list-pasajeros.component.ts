@@ -9,7 +9,10 @@ import { ColumnMode } from 'projects/swimlane/ngx-datatable/src/public-api';
   styleUrls: ['./list-pasajeros.component.scss']
 })
 export class ListPasajerosComponent implements OnInit {
+  
+
   ColumnMode = ColumnMode;
+  viajesAsociados = true
   constructor(private _servicePasajero: PassengerService, private router: Router) { }
   rows: {
     id: string;
@@ -20,13 +23,14 @@ export class ListPasajerosComponent implements OnInit {
   }[] = [];
   ngOnInit() {
     this._servicePasajero.getList({ sorting: '', skipCount: 0, maxResultCount: 100 }).subscribe((response) => {
-      this.rows = response.items.map((travel) => {
+      console.log(response)
+      this.rows = response.items.map((pasajero) => {
         return {
-          id: travel.id,
-          name: travel.name,
-          surname: travel.surname,
-          dni: travel.dni,
-          dateBirth: travel.dateBirth,
+          id: pasajero.id,
+          name: pasajero.name,
+          surname: pasajero.surname,
+          dni: pasajero.dni,
+          dateBirth: pasajero.dateBirth,
         
         };
       });  })

@@ -1,0 +1,33 @@
+
+<div style="height: 90%; margin-top: 1%;" class="container">
+
+    <h1 class="text">Detalle del viaje</h1>
+    <div *ngIf="viaje" style=" width: 100%; ">
+        <ngx-datatable class="material fullscreen container color2"  [columnMode]="ColumnMode.force" [headerHeight]="50"
+          [footerHeight]="0" [rowHeight]="50"  [rows]="viaje" >
+          <ngx-datatable-column name="Origen" prop="origen" [width]="150"> <ng-template let-row="row"></ng-template>
+           </ngx-datatable-column>
+          <ngx-datatable-column name="Destino" prop="destino" [width]="150"></ngx-datatable-column>
+          <ngx-datatable-column name="Fecha de Salida" prop="fechaSalida" [width]="150"></ngx-datatable-column>
+          <ngx-datatable-column name="Fecha de Llegada" prop="fechaLlegada" [width]="150"></ngx-datatable-column>
+        </ngx-datatable>
+      </div>
+   <h2 class="text">Pasajeros:</h2>
+    <ngx-datatable class="material fullscreen color2 container" style="height: 90%;" [columnMode]="ColumnMode.force"
+        [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="rows">
+        <ngx-datatable-column name="Nombre" prop="name" [width]="150">
+            <ng-template let-row="row"></ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Apellido" prop="surname" [width]="150"></ngx-datatable-column>
+        <ngx-datatable-column name="DNI" prop="dni" [width]="150"></ngx-datatable-column>
+        <ngx-datatable-column name="Fecha de Nacimiento" prop="dateBirth" [width]="150"></ngx-datatable-column>
+        <!-- Otras columnas necesarias para los pasajeros -->
+        <ngx-datatable-column name="Opción" [width]="150">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button class="btn btn-success" (click)="addPasajeroViaje(row.id)">
+                    Agregar al viaje 
+                </button>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>

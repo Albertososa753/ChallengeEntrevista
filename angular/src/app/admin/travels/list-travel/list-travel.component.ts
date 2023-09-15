@@ -21,7 +21,6 @@ export class ListTravelsComponent implements OnInit {
     fechaLlegada: string;
     fechaSalida: string;
     medioTransporte: Transporte; 
-    deleteLabel: string;
   }[] = [];
 
   constructor( private travelService: TravelService, private router : Router) {}

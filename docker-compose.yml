@@ -3,7 +3,7 @@ services:
     image: postgres:bullseye
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5432
     environment:
       POSTGRES_PASSWORD: secreto
       POSTGRES_USER: postgres

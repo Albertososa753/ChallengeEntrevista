@@ -25,7 +25,9 @@ import { EditTravelComponent } from './admin/travels/edit-travel/edit-travel.com
 import { LayoutComponent } from './layout/layout.component';
 import { ListPasajerosComponent } from './admin/pasajeros/list-pasajeros/list-pasajeros.component';
 import { NewPasajeroComponent } from './admin/pasajeros/new-pasajero/new-pasajero.component';
-
+import { AddPasajeroComponent } from './admin/travels/add-pasajero/add-pasajero.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { ViajeAsociadoComponent } from './admin/pasajeros/viaje-asociado/viaje-asociado.component';
 
 
 @NgModule({
@@ -48,7 +50,7 @@ import { NewPasajeroComponent } from './admin/pasajeros/new-pasajero/new-pasajer
     FeatureManagementModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
-  declarations: [AppComponent,HomeComponent ,ListTravelsComponent, NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent,NewPasajeroComponent],
+  declarations: [AppComponent,HomeComponent ,ListTravelsComponent, NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent,NewPasajeroComponent, AddPasajeroComponent, ClienteComponent, ViajeAsociadoComponent],
  // providers: [APP_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })

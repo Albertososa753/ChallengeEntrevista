@@ -24,7 +24,10 @@ export class EditTravelComponent implements OnInit {
   ) {}
 
   id: string;
+    navigate(){
+      this.router.navigate(['/admin/travels/add-pasajero/',this.id]);
 
+    }
   ngOnInit() {
     this._route.params.subscribe(params => {
       this.id = params['id'];

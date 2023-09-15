@@ -14,15 +14,22 @@
                 <a class="nav-link" routerLink="/">
                     <i class="fas fa-home"></i> Home
                 </a>
+                <a *ngIf="selectedUserRole === 'cliente'" class="nav-link" routerLink="/cliente/misViajes">
+                    <i class="fas fa-plane"></i> Mis Viajes
+                </a>
                 <!-- Botón "Viajes" con icono de avión -->
-                <a class="nav-link" routerLink="admin/travels/list-travel">
+                <a  *ngIf="selectedUserRole === 'admin'" class="nav-link" routerLink="admin/travels/list-travel">
                     <i class="fas fa-plane"></i> Viajes
                 </a>
                 <!-- Botón "Pasajeros" con icono de persona -->
-                <a class="nav-link" routerLink="admin/pasajeros/list-pasajeros">
+                <a *ngIf="selectedUserRole === 'admin'" class="nav-link" routerLink="admin/pasajeros/list-pasajeros">
                     <i class="fas fa-user"></i> Pasajeros
                 </a>
             </div>
+        </div>
+        <!-- Aquí agregamos el select en la parte derecha -->
+        <div class="ml-auto">
+            <input [(ngModel)]="selectedUserRole" (keyup.enter)="onUserTypeChange()" style="border: 0px;" class="form-input bg-dark  text-dark" placeholder="Escribe 'admin' o 'cliente' y presiona Enter">
         </div>
     </div>
 </nav>

@@ -1,9 +1,14 @@
-<div style="height: 90%; margin-top: 1% ;" class="container ">
-  <a class="btn btn-primary" routerLink="/admin/travels/newTravel"><i class="fas fa-compass"></i> Crear Viaje
+<div style="height: 90%;  ;" class="container ">
+
+<div >
+  <h1 class="text ">Lista de viajes:</h1>
+  <a class="btn btn-primary" style="text-align: end;" routerLink="/admin/travels/newTravel"><i class="fas fa-compass"></i> Crear Viaje
   </a>
+</div>
+
 
   
-    <ngx-datatable class="material fullscreen color2"  style="top: 52px;height: 90%; ;" [columnMode]="ColumnMode.force" [headerHeight]="50"
+    <ngx-datatable class="material fullscreen color2 container"  style="top: 52px;height: 90%; ;" [columnMode]="ColumnMode.force" [headerHeight]="50"
       [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="rows" >
       <ngx-datatable-column name="Origen" prop="origen" [width]="150"> <ng-template let-row="row"></ng-template>
        </ngx-datatable-column>
@@ -17,7 +22,7 @@
       </ngx-datatable-column>
       <ngx-datatable-column  name="Opcion" [width]="150">
         <ng-template  let-row="row" ngx-datatable-cell-template>
-          <button class="btn btn-purple" routerLink="/admin/travels/editTravel/{{row.id
+          <button  class="btn btn-purple " routerLink="/admin/travels/editTravel/{{row.id
           }}" (click)="editarRegistro(row)">  <i class="fas fa-pencil-alt fa-beat"></i>Editar  </button>
           <button class="btn btn-danger" (click)="borrarRegistro(row.id)">  <i class="fa fa-trash-o"></i> 
          Borrar </button>
