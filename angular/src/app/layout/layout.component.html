@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo con letra más pequeña -->
+        <a class="navbar-brand" routerLink="/">
+            <span style="font-size: 0.8em;">EntrevistaABP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center text-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- Botón "Home" con icono de casa -->
+                <a class="nav-link" routerLink="/">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <!-- Botón "Viajes" con icono de avión -->
+                <a class="nav-link" routerLink="admin/travels/list-travel">
+                    <i class="fas fa-plane"></i> Viajes
+                </a>
+                <!-- Botón "Pasajeros" con icono de persona -->
+                <a class="nav-link" routerLink="admin/pasajeros/list-pasajeros">
+                    <i class="fas fa-user"></i> Pasajeros
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

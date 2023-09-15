@@ -12,17 +12,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import { APP_ROUTE_PROVIDER } from './route.provider';
+import { APP_ROUTE_PROVIDER } from './route.provider';
 import { FeatureManagementModule } from '@abp/ng.feature-management';
 import { AbpOAuthModule } from '@abp/ng.oauth';
-import { LoginComponent } from './login/login.component';
 
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { HomeComponent } from './home/home.component';
+import { ListTravelsComponent } from './admin/travels/list-travel/list-travel.component';
+import { NewTravelComponent } from './admin/travels/new-travel/new-travel.component';
+import { FormsModule } from '@angular/forms';
+import { EditTravelComponent } from './admin/travels/edit-travel/edit-travel.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ListPasajerosComponent } from './admin/pasajeros/list-pasajeros/list-pasajeros.component';
+import { NewPasajeroComponent } from './admin/pasajeros/new-pasajero/new-pasajero.component';
 
 
 
 @NgModule({
   imports: [
     BrowserModule,
+    NgxDatatableModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule.forRoot({
@@ -38,7 +48,7 @@ import { LoginComponent } from './login/login.component';
     FeatureManagementModule.forRoot(),
     ThemeBasicModule.forRoot(),
   ],
-  declarations: [AppComponent,LoginComponent],
+  declarations: [AppComponent,HomeComponent ,ListTravelsComponent, NewTravelComponent, EditTravelComponent, LayoutComponent, ListPasajerosComponent,NewPasajeroComponent],
  // providers: [APP_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,4 @@
-/*import { RoutesService, eLayoutType } from '@abp/ng.core';
+import { RoutesService, eLayoutType } from '@abp/ng.core';
 import { APP_INITIALIZER } from '@angular/core';
 
 export const APP_ROUTE_PROVIDER = [
@@ -18,4 +18,3 @@ function configureRoutes(routesService: RoutesService) {
     ]);
   };
 }
-*/

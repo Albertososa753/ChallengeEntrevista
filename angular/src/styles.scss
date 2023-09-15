@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "~font-awesome/css/font-awesome.css";
 
 @keyframes donut-spin {
   0% {
@@ -31,4 +32,24 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  .color{background: #667db6;  /* fallback for old browsers */
+
+    }
+
+    .color2 {
+      border-radius: 5px; /* Puedes ajustar el valor según el radio de curvatura que desees */
+      /* Otras propiedades CSS para estilizar tu div, como color de fondo, ancho, altura, etc. */
+      background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
+    
+      /* Más propiedades aquí */
+    }

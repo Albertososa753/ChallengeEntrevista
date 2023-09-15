@@ -1,0 +1,34 @@
+<form class="travel-form" (ngSubmit)="createTravel()" #travelForm="ngForm">
+  <div class="form-group">
+    <label for="fechaSalida" class="form-label">Fecha de Salida</label>
+    <input type="date" id="fechaSalida" [(ngModel)]="trave.fechaSalida" name="fechaSalida" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="fechaLlegada" class="form-label">Fecha de Llegada</label>
+    <input type="date" id="fechaLlegada" [(ngModel)]="trave.fechaLlegada" name="fechaLlegada" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="origen" class="form-label">Origen</label>
+    <input [(ngModel)]="trave.origen" type="text" id="origen" name="origen" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="destino" class="form-label">Destino</label>
+    <input [(ngModel)]="trave.destino" type="text" id="destino" name="destino" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="medioTransporte" class="form-label">Medio de Transporte</label>
+    <select class="form-control" id="medioTransporte" [(ngModel)]="trave.medioTransporte" name="medioTransporte">
+      <option [value]="transporteEnum.Tren">Tren</option>
+      <option [value]="transporteEnum.Avion">Avión</option>
+      <option [value]="transporteEnum.Micro">Micro</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </div>
+</form>
