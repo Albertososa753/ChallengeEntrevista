@@ -13,14 +13,7 @@ export class LayoutComponent {
 
   onUserTypeChange() {
     if (this.selectedUserRole === 'admin') {
-      console.log(this.selectedUserRole);
       this.userStateService.setUserType(this.selectedUserRole);
-    } else if (this.selectedUserRole === '1') {
-      this.selectedUserRole = 'admin';
-      console.log(this.selectedUserRole);
-      this.userStateService.setUserType(this.selectedUserRole);
-    } else {
-      console.log('Valor no válido');
     }
   }
 }

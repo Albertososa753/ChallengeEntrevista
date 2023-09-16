@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
   selector: 'app-list-pasajeros',
   templateUrl: './add-pasajero.component.html',
   styleUrls: ['./add-pasajero.component.scss'],
-  providers: [DatePipe], // Agrega DatePipe como proveedor
+  providers: [DatePipe],
 })
 export class AddPasajeroComponent implements OnInit {
   ColumnMode = ColumnMode;
@@ -65,18 +65,17 @@ export class AddPasajeroComponent implements OnInit {
 
     this._route.params.subscribe(params => {
       this.idViaje = params['id'];
+      console.log(this.idPasajero, 'pasajero');
+      console.log(this.idViaje, 'viaje');
 
-      // Crea un objeto CreateUpdateViajePasajeroDto y asígnale los valores
       const dto: CreateUpdateViajePasajeroDto = {
         idPasajero: this.idPasajero,
         idViaje: this.idViaje,
       };
 
-      // Llama al servicio con el objeto dto en lugar de las cadenas
       this._serviceViajePasajero.create(dto).subscribe(
         response => {
-          // Maneja la respuesta aquí
-          console.log('Operación de creación exitosa', response);
+          console.log('Operación de creación exitosa');
         },
         error => {
           console.error('No se pudo asignar el pasajero al viaje', error);

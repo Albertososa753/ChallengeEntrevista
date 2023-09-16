@@ -4,32 +4,32 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease-in-out; /* Agrega una transición suave a la propiedad 'transform' */
+    transition: transform 0.3s ease-in-out;
   }
   
   .container:hover {
-    transform: translate(-50%, -50%) scale(1.05); /* Escala ligeramente el contenido al hacer hover */
+    transform: translate(-50%, -50%) scale(1.05);
   }
   
   h1 {
     font-size: 36px;
-    color: #fff; /* Cambia el color del texto a blanco */
+    color: #fff; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s ease-in-out; /* Agrega una transición suave al color del texto */
+    transition: color 0.3s ease-in-out;
   }
   
   .container:hover h1 {
-    color: #007bff; /* Cambia el color del título al hacer hover */
+    color: #007bff; 
   }
   
   p {
     font-size: 18px;
-    color: #fff; /* Cambia el color del texto a blanco */
+    color: #fff; 
     margin-top: 20px;
-    transition: color 0.3s ease-in-out; /* Agrega una transición suave al color del texto */
+    transition: color 0.3s ease-in-out;
   }
   
   .container:hover p {
-    color: #000000; /* Cambia el color de los párrafos al hacer hover */
+    color: #000000;
   }
   

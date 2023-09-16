@@ -9,7 +9,7 @@ import { DatePipe } from '@angular/common';
   selector: 'app-admin',
   templateUrl: './list-travel.component.html',
   styleUrls: ['./list-travel.component.scss'],
-  providers: [DatePipe], // Agrega DatePipe como proveedor
+  providers: [DatePipe], 
 })
 export class ListTravelsComponent implements OnInit {
   replaceableComponents: Set<any> = new Set(); // Inicializa replaceableComponents como un conjunto
@@ -32,12 +32,10 @@ export class ListTravelsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // Llama al servicio para obtener la lista de viajes
     this.travelService
-      .getList({ sorting: '', skipCount: 0, maxResultCount: 100 }) // Ajusta los parámetros según tus necesidades
+      .getList({ sorting: '', skipCount: 0, maxResultCount: 100 }) 
       .subscribe(
         result => {
-          // Mapea los datos del servicio al formato esperado por la tabla
           this.rows = result.items.map(travel => {
             return {
               id: travel.id,
@@ -46,7 +44,6 @@ export class ListTravelsComponent implements OnInit {
               fechaLlegada: this.datePipe.transform(travel.fechaLlegada, 'dd-MM-yyyy'),
               fechaSalida: this.datePipe.transform(travel.fechaSalida, 'dd-MM-yyyy'),
               medioTransporte: travel.medioTransporte,
-              deleteLabel: 'Borrar', // Puedes establecer el valor que desees aquí
             };
           });
         },
@@ -58,7 +55,7 @@ export class ListTravelsComponent implements OnInit {
   borrarRegistro(row: any) {
     this.travelService.delete(row).subscribe(
       () => {
-        this.ngOnInit(); // Llama a ngOnInit para recargar la lista de viajes
+        this.ngOnInit(); 
       },
       error => {
         console.error('Error al borrar el registro', error);
@@ -78,11 +75,5 @@ export class ListTravelsComponent implements OnInit {
         return 'Desconocido';
     }
   }
-  redirigirAEdition(event: any) {
-    // Verifica si el evento es un clic en una fila y si tiene un ID válido
-    if (event.type === 'click' && event.row) {
-      const travelId = event.row.id;
-      this.router.navigate(['admin/travels/editTravel', travelId]);
-    }
-  }
+ 
 }

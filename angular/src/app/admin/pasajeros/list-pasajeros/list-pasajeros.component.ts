@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
   selector: 'app-list-pasajeros',
   templateUrl: './list-pasajeros.component.html',
   styleUrls: ['./list-pasajeros.component.scss'],
-  providers: [DatePipe], // Agrega DatePipe como proveedor
+  providers: [DatePipe]
 })
 export class ListPasajerosComponent implements OnInit {
   ColumnMode = ColumnMode;
@@ -47,7 +47,8 @@ export class ListPasajerosComponent implements OnInit {
   borrarPasajero(row: string) {
     this._servicePasajero.delete(row).subscribe(
       () => {
-        this.ngOnInit(); // Llama a ngOnInit para recargar la lista de viajes
+        
+        this.ngOnInit(); 
       },
       error => {
         console.error('Error al borrar el registro', error);

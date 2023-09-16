@@ -1,21 +1,16 @@
 .text {
-    text-align: start;
-   // margin: 1%;
-    font-size: 2rem;
-    color: black; /* Cambia el color del texto según tu preferencia */
-    font-weight: bold; /* Hace que el texto sea más audaz */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega sombra al texto */
-   // padding: 10px; /* Agrega espacio interno alrededor del texto */
-   margin-bottom: 3%;
-   margin-top: 3%;
-    border-radius: 10px; /* Agrega esquinas redondeadas */
- //   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra alrededor del elemento */
-    transition: all 0.3s ease; /* Agrega una transición suave en los cambios */
+  text-align: start;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 3%;
+  margin-top: 3%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
-  
+
 .text:hover {
-  transform: scale(1.05); /* Escala el elemento en un 5% en el hover */
-  //  background-color: #ddd; /* Cambia el color de fondo en el hover */
- //   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Cambia la sombra en el hover */
+  transform: scale(1.05);
 }
-  

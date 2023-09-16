@@ -10,6 +10,7 @@
       [rowHeight]="50"
       [rows]="viaje"
     >
+    
       <ngx-datatable-column name="Origen" prop="origen" [width]="150">
         <ng-template let-row="row"></ng-template>
       </ngx-datatable-column>
@@ -52,7 +53,6 @@
       prop="dateBirth"
       [width]="150"
     ></ngx-datatable-column>
-    <!-- Otras columnas necesarias para los pasajeros -->
     <ngx-datatable-column name="Opción" [width]="150">
       <ng-template let-row="row" ngx-datatable-cell-template>
         <button class="btn btn-success" (click)="addPasajeroViaje(row.id)">

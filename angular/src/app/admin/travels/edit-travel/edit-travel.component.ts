@@ -87,8 +87,7 @@ export class EditTravelComponent implements OnInit {
   }
 
   guardarCambios() {
-    // Aquí puedes implementar la lógica para guardar los cambios en el servidor
-    console.log('Detalles actualizados:', this.travelDetails);
+    console.log('Detalles actualizados:');
     this._travelService.update(this.id, this.travelDetails).subscribe(() => {
       console.log('VIAJE MODIFICADO CON ÉXITO!');
       this.ngOnInit();

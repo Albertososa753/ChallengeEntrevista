@@ -73,7 +73,6 @@ export class ViajeAsociadoComponent implements OnInit {
             dateBirth: pasajero.dateBirth,
           },
         ];
-        console.log(this.pasajeroDetails, 'aaaaaaaaa');
       });
     });
   }

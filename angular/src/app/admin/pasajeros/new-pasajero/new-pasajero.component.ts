@@ -19,16 +19,12 @@ export class NewPasajeroComponent {
   constructor(private pasajeroService: PassengerService, private router: Router) {}
 
   agregarPasajero() {
-    // Llama al servicio para agregar el nuevo pasajero
     this.pasajeroService.create(this.nuevoPasajero).subscribe(
       response => {
-        // Maneja la respuesta del servicio, por ejemplo, muestra un mensaje de éxito
-        console.log('Pasajero agregado con éxito:', response);
-        // Limpia el formulario
+        console.log('Pasajero agregado con éxito:');
         this.router.navigate(['/admin/pasajeros/list-pasajeros']);
       },
       error => {
-        // Maneja los errores, por ejemplo, muestra un mensaje de error
         console.error('Error al agregar pasajero:', error);
       }
     );

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-travel.component.scss'],
 })
 export class NewTravelComponent {
-  transporteEnum = Transporte; // Agrega esta línea para crear una referencia al enum
+  transporteEnum = Transporte; 
 
   trave: CreateUpdateTravelDto = {
     fechaSalida: '',
@@ -25,13 +25,12 @@ export class NewTravelComponent {
   createTravel() {
     this.travelService.create(this.trave).subscribe(
       response => {
-        // Manejar la respuesta exitosa aquí (por ejemplo, redirección o notificación de éxito).
-        console.log('Travel creado exitosamente', response);
+       
+        console.log('Travel creado exitosamente');
         this.router.navigate(['/admin/travels/list-travel']);
       },
       error => {
-        // Manejar errores aquí (por ejemplo, mostrar un mensaje de error).
-        console.error('Error al crear Travel', error);
+        console.error('Error al crear Viaje', error);
       }
     );
   }
