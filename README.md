@@ -1,4 +1,3 @@
-# EntrevistaABP
 Proyecto de entrevista para conocimiento de angular y .NET
 
 El proyecto fue creado utilizando el siguiente comando
